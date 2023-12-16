@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* This is the CSS section where you can style your elements */
+
+    .course-list {
+      background-color: #f0f0f0; /* Light grey background */
+      font-family: Arial, sans-serif; /* Use a simple and elegant font */
+    }
+
+    .course-item {
+      color: #333; /* Dark text */
+      border: 1px solid #333; /* Add a border to the course item */
+      padding: 10px; /* Add some space around the course item */
+      margin: 10px; /* Add some space between the course items */
+      cursor: pointer; /* Change the cursor to a pointer when hovering over the course item */
+    }
+
+    .course-name {
+      font-weight: bold; /* Make the course name bold */
+    }
+
+    .course-name:hover {
+      color: white; /* Change the course name color to white when hovering over it */
+      background-color: #333; /* Change the course name background color to dark when hovering over it */
+    }
+
+    .lock-icon {
+      display: none; /* Hide the lock icon by default */
+      width: 20px; /* Set the lock icon width */
+      height: 20px; /* Set the lock icon height */
+      position: absolute; /* Position the lock icon relative to the course item */
+      right: 10px; /* Align the lock icon to the right of the course item */
+      top: 10px; /* Align the lock icon to the top of the course item */
+    }
+
+    .heading {
+      color: white; /* Make the heading text white */
+      background-color: #000; /* Make the heading background black */
+      padding: 10px; /* Add some space around the heading */
+      margin: 10px; /* Add some space around the heading */
+      text-align: center; /* Center the heading text */
+      font-size: 24px; /* Increase the heading font size */
+    }
+  </style>
+</head>
+<body>
+  <div class="heading">
+    <!-- This is the heading element that shows 'CoursesList' -->
+    CoursesList
+  </div>
+  <div class="course-list">
+    <!-- This is the HTML section where you can create your elements -->
+
+    <div class="course-item" onclick="showLocked('Entrepreneurship 101: From Idea to Business Plan')">
+      <span class="course-name">Entrepreneurship 101: From Idea to Business Plan</span>
+      <img id="Entrepreneurship 101: From Idea to Business Plan-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+    <div class="course-item" onclick="showLocked('The Science of Happiness: Positive Psychology
+')">
+      <span class="course-name">The Science of Happiness: Positive Psychology
+</span>
+      <img id="The Science of Happiness: Positive Psychology
+-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+      
+    <div class="course-item" onclick="showLocked('"Heart to Heart❤️: Dating Mastery for Girls and Guys"
+')">
+      <span class="course-name">"Heart to Heart❤️: Dating Mastery for Girls and Guys"
+</span>
+      <img id=""Heart to Heart❤️: Dating Mastery for Girls and Guys"
+-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>  
+
+     <div class="course-item" onclick="showLocked('modernPhysics')">
+      <span class="course-name">Modern Physics</span>
+      <img id="modernPhysics-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+     <div class="course-item" onclick="showLocked('Introduction to Virtual Reality (VR)')">
+      <span class="course-name">Introduction to Virtual Reality (VR)</span>
+      <img id="Introduction to Virtual Reality (VR)-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+    <div class="course-item" onclick="showLocked('Introduction to Sustainable Living Practices
+')">
+      <span class="course-name">Introduction to Sustainable Living Practices
+</span>
+      <img id="Introduction to Sustainable Living Practices
+-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+    <div class="course-item" onclick="showLocked('Basics of Coding for Absolute Beginners
+')">
+      <span class="course-name">Basics of Coding for Absolute Beginners
+</span>
+      <img id="Basics of Coding for Absolute Beginners
+-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+    <div class="course-item" onclick="showLocked('Essentials of Healthy Cooking and Recipes')">
+      <span class="course-name">Essentials of Healthy Cooking and Recipes</span>
+      <img id="Essentials of Healthy Cooking and Recipes-lock" class="lock-icon" src="lock.png" alt="Lock icon"> <!-- Add an image of a lock icon -->
+    </div>
+
+
+
+  </div>
+
+  <script>
+    /* This is the JavaScript section where you can add interactivity to your elements */
+
+    function showLocked(courseId) {
+      // This function shows the lock icon and a message when the user clicks on the course item
+      document.getElementById(courseId + '-lock').style.display = 'block'; // Show the lock icon by changing the display property to block
+      alert('This course is locked. Please contact the administrator to unlock it.'); // Show a message in an alert box
+    }
+  </script>
+</body>
+</html>
+
