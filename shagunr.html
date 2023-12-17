@@ -3,28 +3,34 @@
 <head>
   <title>shagun Website</title>
   <style>
-    body {  
-      background-color: #EFEFEF;
-      font-family: Arial, sans-serif;
-
+    body {
+    background-color: #EFEFEF;
+    font-family: Arial, sans-serif;
   }
- h1 {
-      color: #F7CAC9;
-      text-align: center;
-    }
-    .container {
-      display: flex;
-      justify-content: space-between;
-      margin: 50px;
-    }
-    .left {
-      width: 50%;
-      padding-right: 50px;
-    }
-    .right {
-      width: 50%;
-      padding-left: 50px;
-    }
+
+  h1 {
+    color: #F7CAC9;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around; /* Center the children */
+    margin: 50px;
+  }
+
+  .left {
+    width: 50%;
+    padding-right: 50px;
+  }
+
+  .right {
+    width: 50%;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column; /* Align items vertically in the right column */
+    align-items: center; /* Center items horizontally in the right column */
+  }
     .button {
       background-color: #F7CAC9;
       border: none;
@@ -41,6 +47,10 @@
     .button:hover {
       background-color: #3e8e41;
     }
+     
+       #shagun-img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  }
   </style>
 </head>
 <body>
@@ -70,11 +80,26 @@ The SaarVeda Team.</p>
         <li>pay♾️ - for GOD(if exists..!)</li>
       </ul>
       <p>Or enter a custom amount:</p>
-      <form>
-        <input type="text" placeholder="Enter amount">
-        <button class="button">PAY</button>
-      </form>
+     <form id="shagun-form">
+        <input type="text" id="custom-amount" placeholder="Enter amount">
+        <button class="button" id="pay-button">PAY</button>
+        <!-- Image is hidden by default and has an id attribute -->
+        <img id="shagun-img" src="shagunimg.jpg" style="display:none"     alt="shagun image" />
+      </form>  
     </div>
   </div>
+
+<script>
+    document.getElementById("pay-button").addEventListener("click", function(event) {
+      showImage();
+      event.preventDefault(); // Prevent default form submission
+    });
+
+    function showImage() {
+      document.getElementById("shagun-img").style.display = "block";
+    }
+  </script>
+
+
 </body>
 </html>
